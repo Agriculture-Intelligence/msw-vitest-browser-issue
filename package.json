@@ -1,0 +1,26 @@
+{
+  "name": "xdj9rz",
+  "type": "module",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "vitest run",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "aws-amplify": "6.11.0",
+    "msw": "2.7.0",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  },
+  "msw": {
+    "workerDirectory": [
+      ""
+    ]
+  },
+  "description": null,
+  "version": "0.0.42",
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  }
+}
