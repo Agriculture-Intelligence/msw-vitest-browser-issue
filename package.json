@@ -8,17 +8,19 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@vitest/browser": "^2.1.8",
     "aws-amplify": "6.11.0",
     "msw": "2.7.0",
+    "playwright": "^1.49.1",
     "typescript": "5.7.2",
+    "vite": "^6.0.4",
     "vitest": "2.1.8"
   },
   "msw": {
     "workerDirectory": [
-      ""
+      "public"
     ]
   },
-  "description": null,
   "version": "0.0.42",
   "devDependencies": {
     "react-scripts": "1.0.0"

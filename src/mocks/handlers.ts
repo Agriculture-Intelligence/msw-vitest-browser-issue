@@ -1,27 +1,22 @@
-import { http, graphql, HttpResponse } from 'msw'
+import { http, graphql, HttpResponse } from "msw";
 
 export const handlers = [
-  http.get('https://api.example.com/user', () => {
+  http.post("https://cognito-identity.us-east-2.amazonaws.com/", () => {
     return HttpResponse.json({
-      firstName: 'John',
-      lastName: 'Maverick',
-    })
-  }),
-  graphql.query('ListMovies', () => {
-    return HttpResponse.json({
-      data: {
-        movies: [
-          {
-            title: 'The Lord of The Rings',
-          },
-          {
-            title: 'The Matrix',
-          },
-          {
-            title: 'Star Wars: The Empire Strikes Back',
-          },
-        ],
+      Credentials: {
+        AccessKeyId: "mock",
+        Expiration: 1,
+        SecretKey: "mock",
+        SessionToken: "mock",
       },
-    })
+      IdentityId: "us-east-2:mock",
+    });
   }),
-]
+
+  http.get(
+    `https://mock-staging.s3.us-east-2.amazonaws.com/path/to/file.json`,
+    () => {
+      return undefined;
+    }
+  ),
+];
