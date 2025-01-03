@@ -1,9 +1,9 @@
 import { Amplify } from "aws-amplify";
 import { worker } from "./src/mocks/worker.js";
 import amplifyconfig from "./src/mocks/amplifyconfiguration_mock.json";
-beforeAll(() => {
+beforeAll(async () => {
   Amplify.configure(amplifyconfig);
-  worker.start();
+  await worker.start();
 });
 
 afterEach(() => {
