@@ -23,6 +23,6 @@
   },
   "version": "0.0.42",
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "react-scripts": "5.0.1"
   }
 }
